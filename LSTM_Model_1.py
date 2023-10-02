@@ -6,7 +6,6 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, LSTM
 import matplotlib.pyplot as plt
 import yfinance as yf
-import pandas as pd
 scaler = MinMaxScaler(feature_range=(0, 1))
 
 #Asking for user to input the ticker he wants to predict
@@ -106,6 +105,7 @@ plt.figure(figsize=(20,20))
 plt.plot(train_result['Close'])
 plt.plot(validation[["Close","Predictions"]])
 plt.legend(loc='upper left')
+plt.show()
 
 
 # %%
